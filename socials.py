@@ -10,6 +10,7 @@ facebook = 'https://www.facebook.com/'
 twitter = 'https://twitter.com/home'
 instagram = 'https://www.instagram.com/'
 github = 'https://github.com/'
+whatsapp = 'https://web.whatsapp.com/'
 
 if (len(sys.argv) > 1):
     social = ''.join(sys.argv[1:])
@@ -21,3 +22,5 @@ if (len(sys.argv) > 1):
         webbrowser.open(instagram)
     elif (social == 'github' or social == 'gh'):
         webbrowser.open(github)
+    elif (social == 'whatsapp' or social == 'wa'):
+        webbrowser.open(whatsapp)
