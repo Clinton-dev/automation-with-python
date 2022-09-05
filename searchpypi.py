@@ -1,7 +1,7 @@
-# ! python 3.9.13
+#! python 3.9.13
 
 """
-    Opens several search results
+    Opens several search results in pypi.org
 """
 import requests
 import sys
@@ -15,8 +15,16 @@ import bs4
 
 print('Searching ....')
 
-res = requests.get('https://google.com/search?q=' 'https://pypi.org/search/?q='
+res = requests.get('https://pypi.org/search/?q='
                    + ' '.join(sys.argv[1:]))
 res.raise_for_status()
 
-print(res)
+soup = bs4.BeautifulSoup(res.text, 'html.parser')
+linkElems = soup.select('.package-snippet')
+numOpen = min(5, len(linkElems))
+
+for i in range(numOpen):
+    urlToOpen = 'https://pypi.org' + linkElems[i].get('href')
+    # TODO: Open a browser tab for each result.
+    print('Opening... ', urlToOpen)
+    webbrowser.open(urlToOpen)
