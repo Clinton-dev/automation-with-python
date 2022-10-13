@@ -13,7 +13,8 @@ List of various applications that I have created to automate some of my mundane 
 ## Technologies Used
 
 - Python3.8.10
-- PyperClip
+- Selenium
+- BeautifySoup
 
 ##### Setup Instructions and Installation
 
