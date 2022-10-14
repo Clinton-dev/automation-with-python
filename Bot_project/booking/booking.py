@@ -23,3 +23,11 @@ class Booking(webdriver.Chrome):
         selected_currency = self.find_element(
             'css selector', f'a[data-modal-header-async-url-param*="changed_currency=1&selected_currency={currency}"]')
         selected_currency.click()
+
+    def select_destination(self, destination):
+        destination_input = self.find_element(
+            'css selector', 'input[name="ss"]')
+        destination_input.send_keys(destination)
+        first_result = self.find_elements(
+            'class name', 'a80e7dc237')[0]
+        first_result.click()
