@@ -1,1 +1,5 @@
 xkcd/
+
+credentials-sheets.json
+token-sheets.pickle
+token-drive.pickle
