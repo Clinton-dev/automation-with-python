@@ -8,9 +8,10 @@ def getText(filename):
     doc = docx.Document(filename)
     fullText = []
     for par in doc.paragraphs:
-        fullText.append(par.text)
+        # fullText.append(par.text)
+        fullText.append(' ' + par.text)
 
-    return '\n'.join(fullText)
+    return '\n\n'.join(fullText)
 
 
-print(getText('demo.docx'))
+# print(getText('demo.docx'))
