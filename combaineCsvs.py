@@ -27,6 +27,6 @@ def combine_all_csvs():
 
         for row in csvReader:
             csvWriter.writerow(row)
-
+    print('Files were combined into allCsv.csv file')
 
 # combine_all_csvs()

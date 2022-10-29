@@ -1,5 +1,4 @@
 #! python 3.8.10
-
 # removeCsvHeader.py - Removes the header from all csv files in current directory
 
 import csv
