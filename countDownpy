@@ -1,0 +1,17 @@
+#! python 3.8.10
+# countDown.py - a countdown program that plays an alarm at the end of the countdown
+
+import time
+import subprocess
+
+
+timeLeft = 60 * 30
+while timeLeft > 0:
+    print(timeLeft)
+    time.sleep(1)
+    timeLeft = timeLeft - 1
+
+# At the end of the countdown play sound file
+subprocess.Popen(['see', 'alarm.wav'])
+# Stretch goal - open a webbrowser page telling the user to take a 5 min break
+# use timedelta objects to measure no of days until some point in the future
