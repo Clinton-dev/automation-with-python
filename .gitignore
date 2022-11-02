@@ -1,5 +1,8 @@
 xkcd/
 
+gmail-api/
+wallpaperswide/
+
 credentials-sheets.json
 token-sheets.pickle
 token-drive.pickle

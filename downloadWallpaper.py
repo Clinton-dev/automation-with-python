@@ -39,9 +39,8 @@ def downloadWallpaper(url):
     res.raise_for_status()
     imageSoup = bs4.BeautifulSoup(res.text, 'html.parser')
     imageLink = imageSoup.find('a', text='1366x768')['href']
-    print(imageLink)
     # download image
-    link = url + imageLink
+    link = 'http://wallpaperswide.com' + imageLink
     print('Downloading image %s ...' % link)
     resImg = requests.get(link)
     resImg.raise_for_status()
@@ -62,8 +61,12 @@ for i in imageUrls:
     downloadThreads.append(downloadThread)
     downloadThread.start()
 
+
 # Wait for all threads
 for downloadThread in downloadThreads:
     downloadThread.join()
+
+# for i in imageUrls:
+#     downloadWallpaper(i)
 
 print('Done')
