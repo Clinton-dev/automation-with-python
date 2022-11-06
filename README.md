@@ -8,7 +8,7 @@
 
 ## Description
 
-List of various applications that I have created to automate some of my mundane daily tasks.
+Various applications that I have created to automate some of my mundane daily tasks.
 
 ## Technologies Used
 
