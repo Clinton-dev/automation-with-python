@@ -5,13 +5,20 @@
 # 2. textMyself.textmyself('The boring task is finished')
 
 from twilio.rest import Client
-# TODO: add this to env file
-accountSID = 'ACb133f3644df59463028eb7d6b95dd5e6'
-authToken = 'a4cfabf081d617bd68972cc9d4cabaa2'
-twilioNumber = '+19472104607'
-myNumber = '+254703442841'
+import os
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())  # Find .envfile
+
+accountSID = os.getenv('ACCOUNTSID')
+authToken = os.getenv('AUTHTOKEN')
+twilioNumber = os.getenv('TWILIONUMBER')
+myNumber = os.getenv('MYNUMBER')
 
 
 def textmyself(msg):
     twilioCli = Client(accountSID, authToken)
     twilioCli.messages.create(body=msg, from_=twilioNumber, to=myNumber)
+
+
+# textmyself('enda ulale')
