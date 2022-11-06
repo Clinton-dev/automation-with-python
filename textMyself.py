@@ -6,10 +6,10 @@
 
 from twilio.rest import Client
 # TODO: add this to env file
-accountSID = 'ACb133f3644df59463028eb7d6b95dd5e6'
-authToken = 'a4cfabf081d617bd68972cc9d4cabaa2'
-twilioNumber = '+19472104607'
-myNumber = '+254703442841'
+accountSID = ''
+authToken = ''
+twilioNumber = '+1'
+myNumber = '+254'
 
 
 def textmyself(msg):
